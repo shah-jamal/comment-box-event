@@ -1,14 +1,13 @@
 
-// document.getElementById('post-comments').addEventListener('click', function(){
+document.getElementById('post-comments').addEventListener('click', function(){
 
-//     const commentBox = document.getElementById('new-comments');
-//     //const commentVelue = commentBox.velue;
+    var commentBox = document.getElementById('new-comments');
 
-//     const newComments = document.createElement('p');
-//     newComments.innerText = commentBox.Value;
+    var newComments = document.createElement('p');
+    newComments.innerText = commentBox.value;
 
-//     const commentContainer = document.getElementById('comments-container');
-//     commentContainer.appendChild(newComments);
+    var commentContainer = document.getElementById('comments-container');
+    commentContainer.appendChild(newComments);
 
-//     commentBox.Value = '';
-// })
+    commentBox.value = '';
+    })
