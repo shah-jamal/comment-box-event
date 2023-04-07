@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Shah Jamal">
+    <meta name="description" content="onclick events example on JavaScript. We use addEventListener to handle this event.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box Event</title>
+</head>
+<body>
+    <section>
+        <h2>This is a Example of comments box event</h2>
+        <div id="comments-container">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum sequi voluptatibus delectus, fuga repellendus expedita recusandae odit libero necessitatibus ipsa deleniti excepturi, vitae explicabo architecto fugit corrupti error iure quis.</p>
+            <p>Atque accusamus eos cumque nostrum perspiciatis similique quo iusto distinctio nisi consequatur, tempore consectetur reiciendis harum necessitatibus totam reprehenderit deleniti excepturi dolor possimus. Aliquid est eaque nobis iste, eius exercitationem.</p>
+            <p>Molestiae, iusto! Eveniet dolores numquam amet eos doloribus, sapiente iste consectetur odio est natus accusantium minima soluta aspernatur praesentium? Quae quos facilis saepe eaque illo at similique reprehenderit rem autem.</p>
+        </div>
+        <div>
+            <textarea id="new-comments" cols="60" rows="5"></textarea>
+            <br/>
+            <button id="post-comments">Post</button>
+        </div>
+    </section>
+    <script>
+        document.getElementById('post-comments').addEventListener('click', function(){
+
+        var commentBox = document.getElementById('new-comments');
+
+        var newComments = document.createElement('p');
+        newComments.innerText = commentBox.value;
+
+        var commentContainer = document.getElementById('comments-container');
+        commentContainer.appendChild(newComments);
+
+        commentBox.value = '';
+        })
+    </script>
+    <script src="js/event.js"></script>
+</body>
+</html>
